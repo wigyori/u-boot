@@ -165,6 +165,9 @@ config PHY_DAVICOM
 config PHY_ET1011C
 	bool "LSI TruePHY ET1011C support"
 
+config PHY_ICPLUS
+	bool "IC+ IP101 Ethernet PHY support"
+
 config PHY_LXT
 	bool "LXT971 Ethernet PHY support"
 
