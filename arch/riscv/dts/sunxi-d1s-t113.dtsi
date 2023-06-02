@@ -125,6 +125,12 @@
 				pins = "PB6", "PB7";
 				function = "uart3";
 			};
+
+			/omit-if-no-ref/
+			uart0_pins: uart0-pins {
+				pins = "PE2", "PE3";
+				function = "uart0";
+			};
 		};
 
 		ccu: clock-controller@2001000 {
