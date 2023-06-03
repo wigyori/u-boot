@@ -665,6 +665,12 @@ config UART0_PORT_F
 	at the same time, the system can be only booted in the FEL mode.
 	Only enable this if you really know what you are doing.
 
+config UART3_PINS_PE
+	bool "Pins for uart3 are on Port E"
+	---help---
+	Select this option for boards where uart3 uses the Port E pinmux.
+	(Some T113-S3 boards use uart3 as console.)
+
 config OLD_SUNXI_KERNEL_COMPAT
 	bool "Enable workarounds for booting old kernels"
 	---help---

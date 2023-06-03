@@ -127,6 +127,12 @@
 			};
 
 			/omit-if-no-ref/
+			uart3_pe_pins: uart3-pe-pins {
+				pins = "PE8", "PE9";
+				function = "uart3";
+			};
+
+			/omit-if-no-ref/
 			uart0_pins: uart0-pins {
 				pins = "PE2", "PE3";
 				function = "uart0";
