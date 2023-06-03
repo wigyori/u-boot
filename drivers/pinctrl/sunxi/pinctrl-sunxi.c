@@ -748,6 +748,7 @@ static const struct sunxi_pinctrl_function sun20i_d1_pinctrl_functions[] = {
 	{ "uart0",	6 },	/* PB2-PB3 */
 #endif
 	{ "uart3",	7 },	/* PB6-PB9 */
+	{ "uart5",	3 },	/* PE6-PE7 */
 };
 
 static const struct sunxi_pinctrl_desc __maybe_unused sun20i_d1_pinctrl_desc = {
