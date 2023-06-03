@@ -1,0 +1,48 @@
+// SPDX-License-Identifier: (GPL-2.0+ or MIT)
+// Copyright (C) 2022 Arm Ltd.
+
+#include <dt-bindings/interrupt-controller/irq.h>
+
+/dts-v1/;
+
+#include "sun8i-t113s.dtsi"
+#include "sunxi-d1s-t113-mangopi-mq-r.dtsi"
+
+/ {
+	model = "MYIR MYD-YT113X";
+	compatible = "myir,myd-yt113x", "myir,myc-yt113x", "allwinner,sun8i-t113s";
+
+	aliases {
+		serial5 = &uart5;
+	};
+
+	chosen {
+		stdout-path = "serial5:115200n8";
+	};
+};
+
+&cpu0 {
+	cpu-supply = <&reg_vcc_core>;
+};
+
+&cpu1 {
+	cpu-supply = <&reg_vcc_core>;
+};
+
+&pio {
+	/omit-if-no-ref/
+	uart5_pins: uart5-pins {
+		pins = "PE6", "PE7";
+		function = "uart5";
+	};
+};
+
+&uart5 {
+	pinctrl-names = "default";
+	pinctrl-0 = <&uart5_pins>;
+	status = "okay";
+};
+
+&uart3 {
+	status = "disabled";
+};
